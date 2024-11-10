@@ -4,9 +4,12 @@ import WorldMap from "./WorldMap";
 export default function Home() {
   return (
       <div>
-        <CsvUploader />
-        <WorldMap />
+        <div>
+          <CsvUploader />
+        </div>
+        <div style={{maxWidth: "80%", marginLeft: "auto", marginRight: "auto"}}>
+          <WorldMap />
       </div>
-
+    </div>
   );
 }
