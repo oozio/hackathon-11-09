@@ -3,35 +3,19 @@ import React from "react";
 import { ComposableMap, Geographies, ZoomableGroup, Marker, Geography, Graticule,Sphere  } from "react-simple-maps";
 import GLASODGeography from "./geographies/glasod"
 import CountriesGeography from "./geographies/countries";
+import GridGeography from "./geographies/GridGeography";
 
 const geoUrl = "/countries.topojson.json";
 
 const WorldMap: React.FC = () => {
   return (
-    <ComposableMap 
-      // projection="geoOrthographic"
-      projectionConfig={{
-        // rotate: [-10.0, -53.0, 0],
-        // scale: 1200
-        scale: 150
-      }}
-    >
-      <ZoomableGroup
-        // center={[0, 0]} zoom={10}
-      >
+    <ComposableMap projectionConfig={{scale: 150}}>
+      <ZoomableGroup>
         <Graticule stroke="#DDD" clipPath="url(#rsm-sphere)" suppressHydrationWarning/>
         <Sphere stroke="#FF5533" strokeWidth={2} id="rsm-sphere" fill="transparent"/>
         <CountriesGeography />
         <GLASODGeography />
-        <Geographies 
-          geography={"/grid.json"}
-      >
-          {({ geographies }) =>
-            geographies.map((geo) => (
-              <Geography key={geo.rsmKey} geography={geo} fill="#0F0" stroke="#000" strokeWidth={0.1}/>
-            ))
-          }
-        </Geographies>
+        <GridGeography />
       </ZoomableGroup>
     </ComposableMap>
   );
