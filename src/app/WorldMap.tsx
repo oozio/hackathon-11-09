@@ -2,7 +2,7 @@
 import React from "react";
 import { ComposableMap, Geographies, ZoomableGroup, Marker, Geography, Graticule,Sphere  } from "react-simple-maps";
 
-const geoUrl = "/GLASOD.topojson.json";
+const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 const strokeWidth = 0.1;
 
@@ -35,6 +35,15 @@ const WorldMap: React.FC = () => {
           {({ geographies }) =>
             geographies.map((geo) => (
               <Geography key={geo.rsmKey} geography={geo} fill="transparent" stroke="#000" strokeWidth={0.1}/>
+            ))
+          }
+        </Geographies>
+        <Geographies 
+          geography={"/grid.json"}
+      >
+          {({ geographies }) =>
+            geographies.map((geo) => (
+              <Geography key={geo.rsmKey} geography={geo} fill="#0F0" stroke="#000" strokeWidth={0.1}/>
             ))
           }
         </Geographies>
