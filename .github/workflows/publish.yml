@@ -29,8 +29,10 @@ jobs:
         with:
           static_site_generator: next
 
-      - name: Build with Next.js 🏗️
-        run: yarn build
+      - name: Build with Yarn 🏗️
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build
 
       - name: Jank test (remove me later)
         run: ls
