@@ -21,8 +21,8 @@ const WorldMap: React.FC = () => {
       >
         <Graticule stroke="#DDD" clipPath="url(#rsm-sphere)" suppressHydrationWarning/>
         <Sphere stroke="#FF5533" strokeWidth={2} id="rsm-sphere" fill="transparent"/>
-        <CountriesGeography />
         <GLASODGeography />
+        <CountriesGeography />
       </ZoomableGroup>
     </ComposableMap>
   );

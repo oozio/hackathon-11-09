@@ -21,6 +21,7 @@
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-simple-maps": "^3.0.0",
+    "react-tooltip": "^5.28.0",
     "styled-components": "^6.1.13",
     "topojson": "^3.0.2"
   },
