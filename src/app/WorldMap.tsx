@@ -12,7 +12,7 @@ const WorldMap: React.FC = () => {
   return (
     <div>
       <ZoomButtons />
-      <ComposableMap projectionConfig={{ scale: 1000 }}>
+      <ComposableMap projectionConfig={{ scale: 100 }} height={window.innerHeight * .7}>
         <ZoomableGroup>
           <Graticule stroke="#DDD" clipPath="url(#rsm-sphere)" suppressHydrationWarning />
           <Sphere stroke="#FF5533" strokeWidth={2} id="rsm-sphere" fill="transparent" />
