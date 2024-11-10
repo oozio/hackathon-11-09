@@ -23,6 +23,15 @@ const WorldMap: React.FC = () => {
         <Sphere stroke="#FF5533" strokeWidth={2} id="rsm-sphere" fill="transparent"/>
         <GLASODGeography />
         <CountriesGeography />
+        <Geographies 
+          geography={"/grid.json"}
+        >
+          {({ geographies }) =>
+            geographies.map((geo) => (
+              <Geography key={geo.rsmKey} geography={geo} fill="#0F0" stroke="#000" strokeWidth={0.1}/>
+            ))
+          }
+        </Geographies>
       </ZoomableGroup>
     </ComposableMap>
   );
