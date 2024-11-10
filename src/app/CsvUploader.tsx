@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import Papa from 'papaparse'; // Import the papaparse library
+import "./styles.css";
 
 interface CsvRow {
   latitude: number;
@@ -49,7 +50,7 @@ const CsvUploader: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="csv-uploader">
       <h2>Upload CSV File</h2>
       {/* File input */}
       <input type="file" accept=".csv" onChange={handleFileChange} />
