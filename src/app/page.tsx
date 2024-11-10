@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import WorldMap from "./WorldMap";
 
 export default function Home() {
