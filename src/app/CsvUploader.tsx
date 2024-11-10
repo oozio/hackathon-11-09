@@ -46,7 +46,7 @@ const CsvUploader: React.FC = () => {
       )}
 
       <h3>Parsed CSV Data</h3>
-      <table border="1">
+      <table>
         <thead>
           <tr>
             {csvData.length > 0 && Object.keys(csvData[0]).map((key) => <th key={key}>{key}</th>)}
