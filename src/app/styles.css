@@ -1,3 +1,22 @@
-.map {
+.map-container {
     background-color: lightgray;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin: 6px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 6px;
+    background: #333;
+    color: #fff;
 }

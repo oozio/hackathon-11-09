@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
       <CsvUploader />
-      <div className="map" style={{flexGrow: "1"}}>
+      <div className="map-container" style={{flexGrow: "1"}}>
         <WorldMap />
       </div>
     </div>
