@@ -2,18 +2,21 @@
 import React, { useState } from 'react';
 import Papa from 'papaparse'; // Import the papaparse library
 
-import Point, { haversineDistance } from 'nearestNeighbor';
+interface CsvRow {
+  latitude: number;
+  longitude: number;
+  value: number;
+}
 
-// Define the type for the CSV data you are expecting
-interface CsvData {
-  [key: string]: string;
+interface CsvList {
+  [filename: string]: CsvRow[];
 }
 
 const CsvUploader: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
-  const [allCsvData, setAllCsvData] = useState<{string: CsvData}>({}); // Store parsed CSV data
+  const [allCsvData, setAllCsvData] = useState<CsvList>({}); // Store parsed CSV data
 
-  const addCsvData = (csvName: string, newCsvData: CsvData) => {
+  const addCsvData = (csvName: string, newCsvData: CsvRow[]) => {
     setAllCsvData((prevCsvData) => ({ ...prevCsvData, [csvName]: newCsvData }));
   };
 
@@ -36,7 +39,7 @@ const CsvUploader: React.FC = () => {
   // Parse the selected CSV file using PapaParse
   const parseCSV = (file: File) => {
     Papa.parse(file, {
-      complete: (result) => {
+      complete: (result: Papa.ParseResult<CsvRow>) => {
         console.log('Parsed CSV result:', result); // Log the parsed CSV data
         addCsvData(file.name, result.data); // Save parsed data to state
       },
@@ -90,4 +93,3 @@ const CsvUploader: React.FC = () => {
 };
 
 export default CsvUploader;
-

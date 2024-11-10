@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/kd-tree-javascript": "^1.0.3",
     "@types/papaparse": "^5.3.15",
     "@types/react-simple-maps": "^3.0.6",
     "gh-pages": "^6.2.0",

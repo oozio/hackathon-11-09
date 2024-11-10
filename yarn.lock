@@ -386,6 +386,11 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
+"@types/kd-tree-javascript@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@types/kd-tree-javascript/-/kd-tree-javascript-1.0.3.tgz#21b10079995446d7dde218732182fe38652d0533"
+  integrity sha512-U9nzaLMsPmUbNcUqQdl7Q2eZ0xIt3Uar1pfqVnkwNPFi4iq/UwdNTF+rz18nR2pqQW3LvrB/xoZE0RLAAmx7iQ==
+
 "@types/node@*":
   version "22.9.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-22.9.0.tgz#b7f16e5c3384788542c72dc3d561a7ceae2c0365"
