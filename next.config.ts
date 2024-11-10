@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: "/hackathon-11-09",
+  // basePath: "/hackathon-11-09",
   output: "export",
   reactStrictMode: true,
 };
