@@ -7,7 +7,7 @@ export default function Home() {
         <div>
           <CsvUploader />
         </div>
-        <div style={{maxWidth: "80%", marginLeft: "auto", marginRight: "auto"}}>
+        <div style={{maxWidth: "85%", marginLeft: "auto", marginRight: "auto"}}>
           <WorldMap />
       </div>
     </div>
