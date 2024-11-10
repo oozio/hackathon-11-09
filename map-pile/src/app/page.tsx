@@ -1,10 +1,10 @@
 import Image from "next/image";
-import USAMap from "./USAMap";
+import WorldMap from "./WorldMap";
 
 export default function Home() {
   return (
           <div style={{ height: 400 }}>
-        <USAMap />
+        <WorldMap />
       </div>
 
   );
