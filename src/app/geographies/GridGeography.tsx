@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Geographies, Geography } from "react-simple-maps";
+import { Geographies, Geography, Annotation } from "react-simple-maps";
 
 const geoUrl = "/grid.json";
 
@@ -12,9 +12,10 @@ const GridGeography: React.FC = () => {
                     <Geography
                         key={geo.rsmKey}
                         geography={geo}
-                        fill="#0F0"
+                        // fill="#0F0"
+                        fill = "transparent"
                         stroke="#000"
-                        strokeWidth={0.5}
+                        strokeWidth={0.05}
                     />
                 ))
             }

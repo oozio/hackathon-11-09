@@ -5,6 +5,7 @@ import GLASODGeography from "./geographies/glasod"
 import CountriesGeography from "./geographies/countries";
 import GridGeography from "./geographies/GridGeography";
 import ZoomButtons from "./ZoomButtons";
+import AM24Geography from "./geographies/am24";
 
 const geoUrl = "/countries.topojson.json";
 
@@ -41,6 +42,7 @@ const WorldMap: React.FC = () => {
           <Sphere stroke="#FF5533" strokeWidth={2} id="rsm-sphere" fill="transparent" />
           <CountriesGeography />
           <GLASODGeography />
+          <AM24Geography />
           <GridGeography />
         </ZoomableGroup>
       </ComposableMap>

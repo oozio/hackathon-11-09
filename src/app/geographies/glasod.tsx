@@ -20,11 +20,13 @@ const GLASODGeography: React.FC = () => {
         >
           {({ geographies }) =>
             geographies.map((geo) => (
-              <Geography key={geo.rsmKey} geography={geo} fill="transparent" stroke="#000" strokeWidth={0.1}   style={{
+              <Geography key={geo.rsmKey} geography={geo} fill="transparent" stroke="#000" strokeWidth={0.1}   
+              style={{
                 default: { fill: sevColors[geo.properties.SEVERITY] },
                 hover: { fill: "blue"  },
                 pressed: { fill: "#02A" },
-              }}/>
+              }}
+              />
             ))
           }
         </Geographies>
