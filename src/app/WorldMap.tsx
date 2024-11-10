@@ -41,7 +41,6 @@ const WorldMap: React.FC = () => {
           <Sphere stroke="#FF5533" strokeWidth={2} id="rsm-sphere" fill="transparent" />
           <CountriesGeography />
           <GLASODGeography />
-          <GridGeography />
         </ZoomableGroup>
       </ComposableMap>
     </div>
