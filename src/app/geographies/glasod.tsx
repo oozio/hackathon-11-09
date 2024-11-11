@@ -15,17 +15,7 @@ const sevColors = {
 
 const GLASODGeography: React.FC = () => {
   return (
-        <Geographies 
-          geography={geoUrl} 
-          
-          parseGeographies={(geos) => {
-            return geos.map((g) => {
-              // Process geographies here...
-              console.log(g)
-              return g
-            })
-          }}
-      >
+        <Geographies geography={geoUrl} >
           {({ geographies }) =>
             geographies.map((geo) => (
               <Geography key={geo.rsmKey} geography={geo} fill="transparent" stroke="#000" strokeWidth={0.1}   style={{
