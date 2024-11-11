@@ -6,6 +6,7 @@ import CountriesGeography from "./geographies/countries";
 import GridGeography from "./geographies/GridGeography";
 import ZoomButtons from "./ZoomButtons";
 import { LayerType } from "./page";
+import AM24Geography from "./geographies/am24";
 
 const geoUrl = "/countries.topojson.json";
 
