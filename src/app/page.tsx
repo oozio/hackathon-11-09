@@ -8,6 +8,7 @@ import "./styles.css";
 export enum LayerType {
   Countries = "countries",
   GLASOD = "glasod",
+  AM24 = "am24",
   Grid = "grid",
 }
 

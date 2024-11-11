@@ -24,6 +24,12 @@ const LayerSelection: React.FC<Props> = ({checkedLayers, onLayerChecked}) => {
             </label>
             <label>
                 <input type="checkbox"
+                checked={checkedLayers.includes(LayerType.AM24)}
+                onChange={() => onLayerChecked(LayerType.AM24)}/>
+                AM24
+            </label>
+            <label>
+                <input type="checkbox"
                 checked={checkedLayers.includes(LayerType.Grid)}
                 onChange={() => onLayerChecked(LayerType.Grid)}/>
                 Grid

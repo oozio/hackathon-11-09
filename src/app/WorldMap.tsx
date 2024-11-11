@@ -44,6 +44,8 @@ const WorldMap: React.FC<Props> = ({layers}) => {
         return <CountriesGeography key="countries"/>;
       case LayerType.GLASOD:
         return <GLASODGeography key="glasod"/>;
+      case LayerType.AM24:
+        return <AM24Geography key="am24"/>;
       case LayerType.Grid:
         return <GridGeography key="grid"/>;
       default:
